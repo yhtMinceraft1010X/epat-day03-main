@@ -38,6 +38,9 @@ jobs:
     steps:
     - name: Checkout the Repository
       uses: actions/checkout@master
+
+    - name: Give permission for mvnw to work.
+      run: chmod +x ./mvnw
     
     - name: Run Snyk to check for vulnerabilities
       uses: snyk/actions/maven@master
